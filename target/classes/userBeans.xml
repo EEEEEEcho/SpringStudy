@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <import resource="personBeans.xml"></import>
+    <bean id="user" class="echo.pojo.User">
+        <!-- collaborators and configuration for this bean go here -->
+        <property name="username" value="张三"></property>
+        <property name="password" value="1234"></property>
+        <property name="person" ref="person"></property>
+    </bean>
+
+
+
+    <!-- more bean definitions go here -->
+
+</beans>
