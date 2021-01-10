@@ -1,5 +1,6 @@
 package echo;
 
+import echo.dependencies.Outer;
 import echo.pojo.User;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
@@ -22,5 +23,10 @@ public class Main {
         genericApplicationContext.refresh();
         Object user2 = genericApplicationContext.getBean("user");
         System.out.println(user2);
+
+        //ApplicationContext applicationContext = new ClassPathXmlApplicationContext("clientService.xml");
+        ApplicationContext applicationContext1 = new ClassPathXmlApplicationContext("innerBean.xml");
+        Outer outer = (Outer)applicationContext1.getBean("outer");
+        System.out.println(outer);
     }
 }

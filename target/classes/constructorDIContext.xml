@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="spellChecker" class="echo.dependencies.SpellChecker"></bean>
+    <bean id="textEditor" class="echo.dependencies.TextEditor">
+        <constructor-arg ref="spellChecker"></constructor-arg>
+    </bean>
+<!--    使用构造函数参数名进行值消歧-->
+    <bean id="exampleBean" class="echo.dependencies.ExampleBean">
+        <constructor-arg name="years" value="7500000"/>
+        <constructor-arg name="ultimateAnswer" value="42"/>
+<!--        混合注入-->
+        <property name="movieFinder">
+            <ref bean="movieFinder"></ref>  <!-- 可以这样配置 -->
+        </property>
+    </bean>
+    <bean id="movieFinder" class="echo.dependencies.MovieFinder">
+
+    </bean>
+    <bean id="simpleMovieListener" class="echo.dependencies.SimpleMovieListener">
+        <property name="movieFinder" ref="movieFinder"></property>
+    </bean>
+</beans>
