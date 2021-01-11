@@ -1,6 +1,6 @@
 package echo;
 
-import echo.dependencies.Outer;
+import echo.dependencies.depAndConDet.Outer;
 import echo.pojo.User;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;

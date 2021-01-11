@@ -2,9 +2,12 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean name="outer" class="echo.dependencies.Outer">
+    <bean name="outer" class="echo.dependencies.depAndConDet.Outer">
         <property name="person">
-            <bean class="echo.dependencies.Person">
+<!--            此处的bean定义时就不需要写name和id了，就是这个property所对应的bean了
+                内部 bean 总是匿名的，它们总是用外部 bean 创建的。
+-->
+            <bean class="echo.dependencies.depAndConDet.Person">
                 <property name="name" value="EchoMengs"></property>
                 <property name="age" value="24"></property>
             </bean>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean class="echo.dependencies.collectionBean.Foo" name="foo">
+        <property name="accounts">
+            <map>
+                <entry key="one" value="9.99"></entry>
+                <entry key="two" value="1.99"></entry>
+                <entry key="three" value="2.99"></entry>
+            </map>
+        </property>
+    </bean>
+</beans>

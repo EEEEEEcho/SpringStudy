@@ -1,4 +1,4 @@
-package echo.dependencies;
+package echo.dependencies.depAndConDet;
 
 public class Person {
     private String name;

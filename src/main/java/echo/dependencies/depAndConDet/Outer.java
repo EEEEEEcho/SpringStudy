@@ -1,4 +1,6 @@
-package echo.dependencies;
+package echo.dependencies.depAndConDet;
+
+import echo.dependencies.depAndConDet.Person;
 
 public class Outer {
     private Person person;

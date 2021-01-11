@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean name="complexObject" class="echo.dependencies.collectionBean.ComplexObject">
+        <property name="someList">
+            <list>
+                <value>a list element followed by a reference</value>
+            </list>
+        </property>
+        <property name="someMap">
+            <map>
+                <entry key="an entry" value="just some test"></entry>
+            </map>
+        </property>
+        <property name="someSet">
+            <set>
+                <value>just some test</value>
+            </set>
+        </property>
+    </bean>
+    <bean name="myDataSource" class="echo.dependencies.collectionBean.MyDataSource"></bean>
+</beans>
